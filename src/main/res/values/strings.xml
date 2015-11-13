@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TJUCI</string>
+    <string name="splash_tv_version">版本 v1.0.0</string>
+    <string name="splash_tv_init">初始化…</string>
+</resources>

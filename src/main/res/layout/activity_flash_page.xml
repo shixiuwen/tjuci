@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashPage"
+    android:background="#bcf9f9">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_iv_xiaohui"
+        android:src="@drawable/abc_btn_check_to_on_mtrl_000"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_tv_version"
+        android:text="@string/splash_tv_version"
+        android:textColor="#313438"
+        android:layout_below="@id/splash_iv_xiaohui"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_tv_init"
+        android:text="@string/splash_tv_init"
+        android:textColor="#FF585A5C"
+        android:layout_below="@id/splash_tv_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/splash_btn_xiaohui"
+        android:background="@drawable/splash_arc"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
