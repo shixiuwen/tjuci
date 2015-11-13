@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_et_username"
+            android:layout_marginTop="20dp"
+            android:hint="用户名"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_et_password"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:layout_below="@id/login_et_username"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="This is Login page"
-        android:layout_centerInParent="true"
-        android:textSize="20sp"/>
+        android:background="@drawable/english_btn_selector"
+        android:text="登陆"
+        android:textSize="16sp"/>
 
-</RelativeLayout>
+
+</LinearLayout>
