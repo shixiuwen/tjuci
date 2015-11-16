@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_btn_learn"
+        android:layout_weight="1"
+        android:text="学习"
+        android:background="@drawable/english_btn_selector"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_btn_funny"
+        android:layout_weight="1"
+        android:text="趣玩"
+        android:background="@drawable/english_btn_selector"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_btn_service"
+        android:layout_weight="1"
+        android:text="服务"
+        android:background="@drawable/english_btn_selector"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_btn_persional"
+        android:layout_weight="1"
+        android:text="个人"
+        android:background="@drawable/english_btn_selector"/>
+
+</LinearLayout>

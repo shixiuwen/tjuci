@@ -55,6 +55,7 @@ public class EnglishPage extends Activity implements View.OnClickListener {
             case R.id.english_btn_enter:
                 Intent intent3 = new Intent(EnglishPage.this, MainPage.class);
                 startActivity(intent3);
+                finish();
                 break;
             //设置
             case R.id.english_ib_setting:
@@ -71,13 +72,34 @@ public class EnglishPage extends Activity implements View.OnClickListener {
 
     private void setting() {
 
+        int count = 0;
+
         SharedPreferences preferences = getSharedPreferences("english_mode", Context.MODE_PRIVATE);
         edit = preferences.edit();
+
+        //进入时选择状态
+        String mode = preferences.getString("MODE", null);
+        if (mode != null) {
+            switch (mode) {
+                case "EVERY_TIMES":
+                    count = 0;
+                    break;
+                case "EVERY_DAY":
+                    count = 1;
+                    break;
+                case "EVERY_WEEK":
+                    count = 2;
+                    break;
+                case "NO_MORE":
+                    count = 3;
+                    break;
+            }
+        }
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("请设置显示频率");
         builder.setSingleChoiceItems(new String[]{"每次打开显示", "每日首次打开显示", "每周首次打开显示", "不再显示"},
-                0, new DialogInterface.OnClickListener() {
+                count, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
